@@ -1,0 +1,53 @@
+@mixin star($tamanio-estrella: $base-tamanio-estrella) {
+   .star-five {
+      margin: $tamanio-estrella/2 0;
+      position: relative;
+      display: block;
+      color: $color-estrella;
+      width: 0px;
+      height: 0px;
+      border-right:  $tamanio-estrella solid transparent;
+      border-bottom: $tamanio-estrella*0.7 solid $color-estrella;
+      border-left:   $tamanio-estrella solid transparent;
+      -moz-transform:    rotate(35deg);
+      -webkit-transform: rotate(35deg);
+      -ms-transform:     rotate(35deg);
+      -o-transform:      rotate(35deg);
+   }
+
+   .star-five:before {
+      border-bottom: $tamanio-estrella*0.8 solid $color-estrella;
+      border-left: $tamanio-estrella*0.3 solid transparent;
+      border-right: $tamanio-estrella*0.3 solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: $tamanio-estrella*0.45*(-1);
+      left: $tamanio-estrella*0.65*(-1);
+      display: block;
+      content: '';
+      -webkit-transform: rotate(-35deg);
+      -moz-transform:    rotate(-35deg);
+      -ms-transform:     rotate(-35deg);
+      -o-transform:      rotate(-35deg);
+
+   }
+
+   .star-five:after {
+      position: absolute;
+      display: block;
+      color: $color-estrella;
+      top: $tamanio-estrella*0.03;
+      left: $tamanio-estrella*1.05*(-1);
+      width: 0px;
+      height: 0px;
+      border-right: $tamanio-estrella solid transparent;
+      border-bottom: $tamanio-estrella*0.7 solid $color-estrella;
+      border-left: $tamanio-estrella solid transparent;
+      -webkit-transform: rotate(-70deg);
+      -moz-transform:    rotate(-70deg);
+      -ms-transform:     rotate(-70deg);
+      -o-transform:      rotate(-70deg);
+      content: '';
+   }
+}
